@@ -10,8 +10,8 @@
 <body>
 	<div id="wrapper">
 		<div id="header">
+			<h1>Basic CSS Layout</h1>
 		</div>
-		<h1>Basic CSS Layout</h1>
 		<div id="nav">
 		</div>
 		<h2>Navigation</h2>
