@@ -1,40 +1,90 @@
+/* *** css by miss monorom www.intensivstation.ch *** */
+/* css released under Creative Commons License -  http://creativecommons.org/licenses/by/2.0/deed.en  */
+
 body {
-  color:white;
-	background-color: #7657D9;
-	font-size:12px;
-	font-family:Verdana, Arial, Helvetica, sans-serif;
+	background-color: #230B71;
+	font-size: 11px;
+	font-family: Verdana, Arial, SunSans-Regular, Sans-Serif;
+	color:white;
+	padding:0;
+	margin:0;
 }
-div#wrapper {
-	width: 80%;
-	background-color:#4120AD;
-	margin-top: 50px;
-	margin-bottom: 50px;
-	margin-left: auto;
-	margin-right: auto;
+a {color: #DB7093;}
+a:visited {color:#DB7093;}
+a:hover {color: #564b47;}
+a:active { color:#000000;}
+
+h1 {
+	text-transform:uppercase;
+	text-align:center;
+	background-color: #937DD9;
+	border-top:1px solid #564b47;
+	border-bottom:1px solid #564b47;
+	padding:5px 15px;
+	margin:0 ;
+}
+
+h2 {
+	font-size:20px;
+	font-weight: normal;
+	padding: 5px 10px;
+	margin:0;
+}
+
+img.download {vertical-align:middle;}
+
+/* ----------container to center the layout-------------- */
+#container {
+	width: 900px;
+	margin-bottom: 10px;
+	margin: 0 auto;
+	background-color: #453282;
+}
+
+/* ----------banner for logo-------------- */
+#banner {
+	background-color: #e1ddd9;
+	text-align: right;
 	padding: 0px;
-	border: thin solid #000000;
-}
-div#header {
-	background-color:#230B71;
-	padding: 15px;
 	margin: 0px;
-	text-align: center;
 }
-div#nav {
-	background-color:#230B71;
-	width: 25%;
-	padding: 10px;
-	margin-top: 1px;
+#banner img {padding:10px 0px;} 
+
+/* -----------------content--------------------- */
+#content {
+	background-color: #7657D9;
+	padding: 0px;
+	margin: 0 200px;
+}
+div#content { 
+	min-height:600px;
+	height:expression(this.scrollHeight > 600 ? "auto":"600px"); 
+}
+
+p, pre{
+	padding: 5px 10px;
+	margin:0px;
+}
+
+/* --------------left navi------------- */
+#left {
 	float: left;
+	width: 200px;
+	margin: 0;
+	padding: 0;
 }
-div#main {
-	background-color:#453282;
-	margin-left: 30%;
-	margin-top: 1px;
-	padding: 10px;
+#right {
+	float: right;
+	width: 200px;
+	margin: 0;
+	padding: 0;
 }
-div#footer {
-	padding: 15px;
-	margin: 0px;
-	border-top: thin solid #000000;
+
+
+/* -----------footer--------------------------- */
+#footer {
+	clear: both;
+	margin: 0;
+	padding: 0;
+	text-align: right; 
 }
