@@ -1,0 +1,44 @@
+CREATE TABLE users (
+  user_name varchar(255),
+	password varchar(255),
+	PRIMARY KEY (user_name)
+)ENGINE = INNODB;
+
+CREATE TABLE exercise (
+	user_name varchar(255),
+	eDate date,
+	hours smallint,
+	calories integer,
+	FOREIGN KEY (user_name) REFERENCES users (user_name),
+	PRIMARY KEY (user_name, edate)
+)ENGINE = INNODB;
+
+CREATE TABLE travel_destinations (
+	user_name varchar (255),
+	travel_log integer,
+	destination varchar (255),
+	FOREIGN KEY (user_name) REFERENCES users (user_name),
+	PRIMARY KEY (user_name,travel_log)
+)ENGINE = INNODB;
+
+CREATE TABLE journal_entries (
+	user_name varchar(255),
+	jDate date,
+	entry_num bigint,
+	journal_type char(2),
+	travel_log integer,
+	main_entry varchar(1000),
+	lessons_learned varchar(1000),
+	FOREIGN KEY (user_name) REFERENCES users(user_name),
+	FOREIGN KEY (user_name, travel_log) REFERENCES travel_destinations (user_name, travel_log),
+	PRIMARY KEY (user_name, entry_num)
+)ENGINE = INNODB;
+
+CREATE TABLE photos (
+	user_name varchar (255),
+	filename varchar (255),
+	travel_log integer,
+	FOREIGN KEY (user_name) REFERENCES users(user_name),
+	FOREIGN KEY (user_name, travel_log) REFERENCES travel_destinations (user_name, travel_log),
+	PRIMARY KEY (user_name, filename)
+)ENGINE = INNODB;
