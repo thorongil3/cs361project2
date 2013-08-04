@@ -1,5 +1,5 @@
 <html>
-<head>  
+<head>	
 	<link type="text/css" href="style/main.css" rel="stylesheet" media="all" />
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
 	</script><title>How to Build a Basic CSS Layout</title>
@@ -13,9 +13,10 @@
 			<h1>Basic CSS Layout</h1>
 		</div>
 		<div id="nav">
+			<h2>Navigation</h2>
 		</div>
-		<h2>Navigation</h2>
 		<div id="main">
+			
 		</div>
 		<div id="footer">
 		</div>
