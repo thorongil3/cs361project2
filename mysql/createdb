@@ -31,7 +31,7 @@ CREATE TABLE journal_entries (
 	lessons_learned varchar(1000),
 	FOREIGN KEY (user_name) REFERENCES users(user_name),
 	FOREIGN KEY (user_name, travel_log) REFERENCES travel_destinations (user_name, travel_log),
-	PRIMARY KEY (user_name, entry_num)
+	PRIMARY KEY (user_name, jDate)
 )ENGINE = INNODB;
 
 CREATE TABLE photos (
