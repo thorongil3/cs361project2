@@ -8,6 +8,10 @@
 in the index.php file and migrate all of this code to another page
 -->
 
+<?php
+	session_start();
+?>
+
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 </head>
 <body>
@@ -18,12 +22,33 @@ in the index.php file and migrate all of this code to another page
 	<div id="left">
 		<a href="">Manage Photo Album</a></br></br>
 		<a href="">Track Exercise</a></br></br>
-		<a href="">Track Goals/Life Events</a></br></br>
-		<a href="">Journal</a></br></br>
+		<a href="goals.php">Track Goals/Life Events</a></br></br>
+		<a href="Journal.php">Journal</a></br></br>
 		<a href="">Edit User Interface</a></br></br>
 		<a href="">Infographic Options</a></br></br>
 	</div>
 	<div id="right">
+		<?php
+			$form = 	'<form id="logIn" action="logUserIn.php" method="post">'.
+							'<h3>LOG IN</h3>'.
+							'<p>'.
+								'Username:'.
+								'<input type="text" name="user_name"></input>'.
+							'</p>'.
+							'<p>'.
+								'Password:'.
+								'<input type="text" name="password"></input>'.
+							'</p>'.
+							'<input type="submit" value="Submit">'.
+						'</form>';
+			$logout =	'<a href="logout.php">logout</a>';
+			if($_SESSION['user_name'] == null){
+				echo($form);
+			}
+			else{
+				echo($logout);
+			}
+		?>
 	</div>	
 	<div id="content">
 	</div>
@@ -31,4 +56,3 @@ in the index.php file and migrate all of this code to another page
 	</div>
 </div>
 </body>
-</html>
